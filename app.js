@@ -23,6 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', require('./routes/products'));
+app.use('/categories', require('./routes/categories'));
 //
 mongoose.connect('mongodb://localhost:27017/C5');
 mongoose.connection.on('connected',function(){
